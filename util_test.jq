@@ -4,6 +4,6 @@ def to_be($expected; $msg):
     [
       $msg,
       "expected: \($expected)",
-      "actual: \($actual)"  
+      "actual  : \($actual)"  
     ] | join("\n")
   ) else empty end;
