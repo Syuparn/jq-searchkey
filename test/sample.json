@@ -1,0 +1,19 @@
+{
+  "name": "Taro",
+  "age": 22,
+  "country": "Japan",
+  "friends": [
+    {
+      "name": "Hanako",
+      "country": "Japan"
+    },
+    {
+      "name": "John",
+      "country": "USA"
+    }
+  ],
+  "company": {
+    "name": "Hogehoge industry",
+    "country": "Japan"
+  } 
+}

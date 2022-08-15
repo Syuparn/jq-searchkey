@@ -1,5 +1,5 @@
 .PHONY: test
-test: test/unit
+test: test/unit test/integ
 
 .PHONY: test/unit
 test/unit:
@@ -11,3 +11,7 @@ test/unit:
 		jq -n -r -f $$f; \
 		echo; \
 	done
+
+.PHONY: test/integ
+test/integ:
+	bats test/sample.bats
