@@ -3,7 +3,7 @@ def to_be($expected; $msg):
   if $actual != $expected then (
     [
       $msg,
-      "expected: \($expected)",
-      "actual  : \($actual)"  
+      "expected: `\($expected)`",
+      "actual  : `\($actual)`"  
     ] | join("\n")
   ) else empty end;

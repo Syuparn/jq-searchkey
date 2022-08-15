@@ -38,5 +38,34 @@ def test_search_keys_by:
     $t.object | search_keys_by($t.name) | to_be($t.expected; "title '\($t.title)': wrong output")
   );
 
-# run test
-test_search_keys_by
+
+def test_humanize_key:
+  [
+    {
+      title: "top level key",
+      key: ["foo"],
+      expected: ".foo"
+    },
+    {
+      title: "top level array element",
+      key: [2],
+      expected: "[2]"
+    },
+    {
+      title: "nested key",
+      key: ["foo", "bar", "baz"],
+      expected: ".foo.bar.baz"
+    },
+    {
+      title: "key inside array",
+      key: ["foo", 1, "baz"],
+      expected: ".foo[1].baz"
+    }
+  ] as $tests |
+  $tests[] as $t | (
+    $t.key | humanize_key | to_be($t.expected; "title '\($t.title)': wrong output")
+  );
+
+# run tests
+test_search_keys_by,
+test_humanize_key
