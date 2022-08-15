@@ -36,6 +36,16 @@ $ cat test/sample.json | jq-searchkey "name"
 .company.name
 ```
 
+# install
+## use installer
+
+(under construction)
+
+## install manually
+
+- clone this repository
+- add the directory to your PATH
+
 # requirements
 
 - `jq`
