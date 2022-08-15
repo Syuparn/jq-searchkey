@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat - | jq --arg key $1 -r -f main.jq
