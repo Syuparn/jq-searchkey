@@ -4,6 +4,8 @@ def to_be($expected; $msg):
     [
       $msg,
       "expected: `\($expected)`",
-      "actual  : `\($actual)`"  
-    ] | join("\n")
+      "actual  : `\($actual)`",
+      "" # only for breakline
+    ] | join("\n") |
+    halt_error(1) # exit with status code 1
   ) else empty end;
