@@ -13,3 +13,8 @@
     ((i+=1))
   done
 }
+
+@test "show help by option -h" {
+  actual=$(./jq-searchkey -h | head -n 1)
+  [ "$actual" = "Usage: jq-searchkey <key>" ]
+}

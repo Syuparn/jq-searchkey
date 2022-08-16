@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# show help
+HELP=$(cat << EOS
+Usage: jq-searchkey <key>
+
+Example:
+    $ cat test/sample.json | jq-searchkey name
+    .name
+    .friends[0].name
+    .friends[1].name
+    .company.name
+EOS
+)
+
+if [ "$1" == "-h" ]; then
+    echo "$HELP"
+    exit 0
+fi
+
 # NOTE: since jq modules path are relative, filter should be run in this directory
 cd $(dirname $0)
 

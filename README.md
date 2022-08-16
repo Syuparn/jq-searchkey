@@ -29,7 +29,7 @@ search nested keys in JSON by key names with jq
 
 ```bash
 # search key "name"
-$ cat test/sample.json | jq-searchkey "name"
+$ cat test/sample.json | jq-searchkey name
 .name
 .friends[0].name
 .friends[1].name
