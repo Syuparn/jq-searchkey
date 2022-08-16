@@ -1,4 +1,7 @@
 # jq-searchkey
+
+[![test](https://github.com/Syuparn/jq-searchkey/actions/workflows/test.yml/badge.svg)](https://github.com/Syuparn/jq-searchkey/actions/workflows/test.yml)
+
 search nested keys in JSON by key names with jq
 
 # usage
