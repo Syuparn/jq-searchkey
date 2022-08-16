@@ -39,7 +39,9 @@ $ cat test/sample.json | jq-searchkey "name"
 # install
 ## use installer
 
-(under construction)
+```bash
+curl -L https://raw.githubusercontent.com/Syuparn/jq-searchkey/main/install.sh | bash
+```
 
 ## install manually
 
@@ -56,5 +58,5 @@ $ cat test/sample.json | jq-searchkey "name"
 NOTE: `make` and `bats` are required
 
 ```bash
-$ make test
+make test
 ```
